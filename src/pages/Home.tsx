@@ -33,7 +33,7 @@ export default function Home() {
  <header><strong>Offline Notes Lab</strong><span>{online ? "Online" : "Offline"}</span></header>
  <aside><p>WORKSHOP MAP</p>{steps.map((step, index) => <button key={step}
  onClick={() => setDone(done.includes(index) ? done.filter((x) => x !== index) : [...done, index])}>{done.includes(index) ? "✓ " : `${index + 1}. `}{step}</button>)}<small>{progress}% complete</small></aside>
- <main><p className="eyebrow">FOUNDATION TRACK</p><h1>Keep learning when the network leaves. Evan Christopher  Mechatronics Engineering 2024/1/96121ET</h1><p className="lede">Save a note, refresh the page, then test the same experience with the network turned off.</p>
+ <main><p className="eyebrow">FOUNDATION TRACK</p><h1>Keep learning when the network leaves. Evan Christopher 2024/1/96121ET Mechatronics Engineering </h1><p className="lede">Save a note, refresh the page, then test the same experience with the network turned off.</p>
  <section className="columns"><div><h2>Notes from the lab</h2>{notes.map((note) => <article key={note.id}><h3>{note.title}</h3><p>{note.body}</p><small>{note.updated}</small></article>)}</div>
  <form onSubmit={(event) => { event.preventDefault(); addNote(); }}><h2>Write a note</h2><label>Title<input value={title} onChange={(event) => setTitle(event.target.value)} /></label><label>Observation<textarea value={body} onChange={(event) => setBody(event.target.value)} rows={5} /></label><button type="submit">Save locally</button></form>
  </section>
